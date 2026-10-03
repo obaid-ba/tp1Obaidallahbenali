@@ -8,12 +8,14 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textViewTitre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TP1"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.094" />
@@ -22,35 +24,43 @@
         android:id="@+id/textViewCompteur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="0"
+        android:textSize="64sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.199" />
-
-    <Button
-        android:id="@+id/buttonIncrementer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+"
-        tools:layout_editor_absoluteX="211dp"
-        tools:layout_editor_absoluteY="229dp" />
+        app:layout_constraintVertical_bias="0.25" />
 
     <Button
         android:id="@+id/buttonDecrementer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="-"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="229dp" />
+        app:layout_constraintEnd_toStartOf="@+id/buttonIncrementer"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCompteur" />
+
+    <Button
+        android:id="@+id/buttonIncrementer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonDecrementer"
+        app:layout_constraintTop_toTopOf="@+id/buttonDecrementer" />
 
     <Button
         android:id="@+id/buttonReinitialiser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Réinitialiser"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="312dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDecrementer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
